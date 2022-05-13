@@ -41,7 +41,7 @@ jobs:
           curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/fiddlermikey/reportscripts
 
       # checks some repo info using github api
-      - name: Check the reportsscript repo
+      - name: Check the reportsscript repo using api
       - uses: actions/github-script@v6
         with:
           script: |
