@@ -45,6 +45,6 @@ jobs:
       - name: Check the reportsscript repo using api
 #      - with:
 #          const repoinfo: ${{ github.repos.fiddlermikey/reportscripts }}
-        run: echo github.repos.fiddlermikey/reportscripts
+        run: echo ${{ github.repos.fiddlermikey/reportscripts }}
             
 
