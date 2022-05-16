@@ -41,6 +41,11 @@ jobs:
         run: |
           curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/fiddlermikey/reportscripts
 
+      # checks some repo info using curl
+      - name: Check the keyfactor org repos
+        run: |
+          curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/keyfactor/actions
+
       # Testing with gh scripting
       - name: Check using github-script
         uses: actions/github-script@v6
@@ -48,7 +53,7 @@ jobs:
           script: |
             const rname = context.payload.repository.name
             console.log(`${ rname }`)
-          #result-encoding: string
+            
 
 
 
