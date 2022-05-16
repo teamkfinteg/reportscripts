@@ -47,7 +47,7 @@ jobs:
         with:
           script: |
             const rname = context.payload.repository.name
-            console.log(${ rname })
+            console.log(`${ rname }`)
           #result-encoding: string
 
 
