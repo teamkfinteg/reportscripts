@@ -24,6 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - uses: actions/github-script@v6
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -42,8 +43,8 @@ jobs:
 
       # checks some repo info using github api
       - name: Check the reportsscript repo using api
-      - uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.repos.listPublic();
+      - with:
+          const repoinfo: ${{ github.repos.fiddlermikey/reportscripts }}
+          script: console.log(` repoinfo = ${ repoinfo }`)
+            
 
