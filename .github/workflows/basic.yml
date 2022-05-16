@@ -45,8 +45,8 @@ jobs:
       - name: Check using javascript
         uses: actions/github-script@v6
         with:
-          script: console.log(context)
-          return-encoding: string
+          script: console.log(context.name)
+          result-encoding: string
 
 
 
