@@ -44,5 +44,10 @@ jobs:
       # Testing with js
       - name: Check using javascript
         uses: actions/github-script@v6
-          console.log(`Hello world`)
+        with:
+          script: console.log(context)
+          return-encoding: string
+
+
+
  
