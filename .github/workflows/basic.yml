@@ -46,7 +46,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: console.log(context.repository)
-          result-encoding: string
+          #result-encoding: string
 
 
 
