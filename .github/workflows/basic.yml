@@ -43,8 +43,8 @@ jobs:
 
       # checks some repo info using github api
       - name: Check the reportsscript repo using api
-      - with:
-          const repoinfo: ${{ github.repos.fiddlermikey/reportscripts }}
-        run: console.log(` repoinfo = ${ repoinfo }`)
+#      - with:
+#          const repoinfo: ${{ github.repos.fiddlermikey/reportscripts }}
+        run: echo github.repos.fiddlermikey/reportscripts
             
 
