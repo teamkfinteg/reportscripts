@@ -45,6 +45,6 @@ jobs:
       - name: Check the reportsscript repo using api
       - with:
           const repoinfo: ${{ github.repos.fiddlermikey/reportscripts }}
-          script: console.log(` repoinfo = ${ repoinfo }`)
+        run: console.log(` repoinfo = ${ repoinfo }`)
             
 
