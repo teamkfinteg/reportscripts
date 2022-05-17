@@ -57,13 +57,13 @@ jobs:
         uses: actions/github-script@v4.0.2
         with:
           script: |
-            const response = await github.repos.listForOrg({ org: 'keyfactor' })
+            const responses = await github.repos.listForOrg({ org: 'keyfactor' })
             # console.log(response)
             #const result = await response.data()
-            response.forEach(i => {
-              console.log(i.html_url)
-              console.log(i.full_name)
-            })
+            for (const response of responses) {
+              console.log(response.html_url)
+              console.log(reponse.full_name)
+            }
 
 
 
