@@ -48,23 +48,21 @@ jobs:
 
       # Testing with gh scripting
       - name: Check using github-script 1
-        uses: actions/github-script@v6
+        uses: actions/github-script@v4.0.2
         with:
           script: |
             const rname = context.payload.repository.name
             console.log(`${ rname }`)
       - name: Check using github-script 2
-        uses: actions/github-script@v6
+        uses: actions/github-script@v4.0.2
         with:
           script: |
-            const response = await github.repos.listForOrg({
-              org: 'keyfactor'
-            })
-            const result = await response.json()
-            result.forEach(i => {
-              console.log(i.html_url);
-              console.log(i.full_name);
-            })
+            const response = await github.repos.listForOrg({ org: 'keyfactor' })
+#            const result = await response.json()
+#            result.forEach(i => {
+#              console.log(i.html_url)
+#              console.log(i.full_name)
+#            })
 
 
 
