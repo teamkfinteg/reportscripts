@@ -57,7 +57,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const response = await core.repos.listForOrg({
+            const response = await github.repos.listForOrg({
               org: 'keyfactor'
             })
             const result = await response.json()
