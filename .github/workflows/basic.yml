@@ -58,12 +58,12 @@ jobs:
         with:
           script: |
             const response = await github.repos.listForOrg({ org: 'keyfactor' })
-            console.log(response)
-            const result = await response.data()
-#            result.forEach(i => {
-#              console.log(i.html_url)
-#              console.log(i.full_name)
-#            })
+            # console.log(response)
+            #const result = await response.data()
+            response.forEach(i => {
+              console.log(i.html_url)
+              console.log(i.full_name)
+            })
 
 
 
