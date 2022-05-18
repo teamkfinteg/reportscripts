@@ -21,6 +21,7 @@ jobs:
           script: |
             const responses = await github.repos.listForOrg({ org: 'keyfactor' })
             const responseData = responses.data
+            console.log("Total repositories: " + responseData.length)
             for (const response of responseData) {
               console.log(response.html_url)
               console.log(response.full_name)
