@@ -61,7 +61,7 @@ jobs:
             const responseData = responses.data
             for (const response of responseData) {
               console.log(response.html_url)
-              console.log(reponse.full_name)
+              console.log(response.full_name)
             }
 
 
