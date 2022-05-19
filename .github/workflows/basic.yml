@@ -26,7 +26,7 @@ jobs:
         with:
           github-token: ${{ secrets.token }}
           script: |
-            const responses = await github.repos.listForOrg({ org: 'keyfactor' })
+            const responses = await github.repos.listForOrg({ org: 'teamkfinteg' })
             const responseData = responses.data
             console.log("Total repositories: " + responseData.length)
             for (const response of responseData) {
