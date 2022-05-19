@@ -1,12 +1,6 @@
 name: Repository Reporting
 
 on:
-
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  workflow_dispatch:
   workflow_call:
     secrets:
       token:
@@ -31,7 +25,7 @@ jobs:
             console.log("Total repositories: " + responseData.length)
             for (const response of responseData) {
               console.log(response.html_url)
-              console.log(response.full_name)
+              console.log(response.name)
             }
 
 
