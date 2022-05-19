@@ -24,6 +24,7 @@ jobs:
       - name: List Org Repos
         uses: actions/github-script@v4.0.2
         with:
+          repo-token: ${{ secrets.token }}
           script: |
             const responses = await github.repos.listForOrg({ org: 'keyfactor' })
             const responseData = responses.data
