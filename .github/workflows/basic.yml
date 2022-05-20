@@ -32,7 +32,7 @@ jobs:
             for (const response of responseData) {
               const rURL = response.html_url
               const rName = response.name
-              const lTeams = await github.repos.orgName.teams
+              const lTeams = await github.repos.orgName.rName.teams
               console.log(rURL)
               console.log(rName)
               console.log(lTeams)
