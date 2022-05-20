@@ -25,7 +25,7 @@ jobs:
           github-token: ${{ secrets.token }}
           script: |
             // console.log(${{ inputs.orgname }})
-            const orgName = 'teamkfinteg'
+            const orgName = '${{ inputs.orgname }}'
             const responses = await github.repos.listForOrg({ org: orgName })
             const responseData = responses.data
             console.log("Total repositories: " + responseData.length)
