@@ -26,7 +26,7 @@ jobs:
           script: |
             console.log(${{ inputs.orgname }})
             const orgName = 'teamkfinteg'
-            const responses = await github.repos.listForOrg({ org: teamkfinteg })
+            const responses = await github.repos.listForOrg({ org: `teamkfinteg` })
             const responseData = responses.data
             console.log("Total repositories: " + responseData.length)
             for (const response of responseData) {
