@@ -6,6 +6,10 @@ on:
       token:
         description: 'Secret token from caller workflow to access private repos'
         required: true
+    inputs:
+      orgname:
+        required: true
+        type: string
 
 
 jobs:
@@ -20,7 +24,7 @@ jobs:
         with:
           github-token: ${{ secrets.token }}
           script: |
-            const orgName = 'Keyfactor'
+            const orgName = orgname
             const responses = await github.repos.listForOrg({ org: orgName })
             const responseData = responses.data
             console.log("Total repositories: " + responseData.length)
