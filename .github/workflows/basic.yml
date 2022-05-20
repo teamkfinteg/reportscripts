@@ -24,8 +24,10 @@ jobs:
             const responseData = responses.data
             console.log("Total repositories: " + responseData.length)
             for (const response of responseData) {
-              console.log(response.html_url)
-              console.log(response.name)
+              const rURL = response.html_url
+              const rName = response.name
+              console.log(rURL)
+              console.log(rName)
             }
 
 
